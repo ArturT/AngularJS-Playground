@@ -3,10 +3,11 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 app = angular.module("Raffler", ["ngResource"])
 
-app.factory "Entry", ($resource) ->
+app.factory "Entry", ["$resource", ($resource) ->
   $resource("/entries/:id", {id: "@id"}, {update: {method: "PUT"}})
+]
 
-@RafflerCtrl = ($scope, Entry) ->
+@RafflerCtrl = ["$scope", "Entry", ($scope, Entry) ->
   $scope.entries = Entry.query()
 
   #$scope.entries = [
@@ -29,3 +30,4 @@ app.factory "Entry", ($resource) ->
       entry.winner = true
       entry.$update()
       $scope.lastWinner = entry
+]

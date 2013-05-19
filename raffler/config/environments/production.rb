@@ -21,7 +21,7 @@ Raffler::Application.configure do
   config.assets.digest = true
 
   # Doing this means that the names won’t be changed, although the minification won’t be as effective.
-  config.assets.js_compressor = Sprockets::LazyCompressor.new { Uglifier.new(mangle: false) }
+  #config.assets.js_compressor = Sprockets::LazyCompressor.new { Uglifier.new(mangle: false) }
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
