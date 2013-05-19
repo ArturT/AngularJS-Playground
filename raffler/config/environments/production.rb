@@ -9,7 +9,7 @@ Raffler::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
@@ -19,6 +19,9 @@ Raffler::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
+
+  # Doing this means that the names won’t be changed, although the minification won’t be as effective.
+  config.assets.js_compressor = Sprockets::LazyCompressor.new { Uglifier.new(mangle: false) }
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
