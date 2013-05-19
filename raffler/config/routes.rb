@@ -1,6 +1,5 @@
 Raffler::Application.routes.draw do
-  resources :entries
-
+  resources :entries, defaults: { format: :json }
 
   root to: "raffler#index"
 
