@@ -3,9 +3,10 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 app = angular.module("Raffler", ["ngResource"])
 
-@RafflerCtrl = ($scope, $resource) ->
-  Entry = $resource("/entries/:id", {id: "@id"}, {update: {method: "PUT"}})
+app.factory "Entry", ($resource) ->
+  $resource("/entries/:id", {id: "@id"}, {update: {method: "PUT"}})
 
+@RafflerCtrl = ($scope, Entry) ->
   $scope.entries = Entry.query()
 
   #$scope.entries = [
