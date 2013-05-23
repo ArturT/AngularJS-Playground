@@ -1,0 +1,32 @@
+<div ng-app="">
+  <div class="alert alert-success">
+    <input type="text" ng-model="message" />
+    <h1>{{message}}</h1>
+
+    <div ng-controller="FirstDotCtrl">
+      <input type="text" ng-model="message" />
+      <h1>{{message}}</h1>
+    </div>
+
+    <div ng-controller="SecondDotCtrl">
+      <input type="text" ng-model="message" />
+      <h1>{{message}}</h1>
+    </div>
+  </div>
+
+
+  <div class="alert">
+    <input type="text" ng-model="data.message" />
+    <h1>{{data.message}}</h1>
+
+    <div ng-controller="FirstDotCtrl">
+      <input type="text" ng-model="data.message" />
+      <h1>{{data.message}}</h1>
+    </div>
+
+    <div ng-controller="SecondDotCtrl">
+      <input type="text" ng-model="data.message" />
+      <h1>{{data.message}}</h1>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,3 @@
+@FirstDotCtrl = ($scope) ->
+
+@SecondDotCtrl = ($scope) ->
