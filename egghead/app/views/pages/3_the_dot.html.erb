@@ -1,30 +1,38 @@
 <div ng-app="">
+  <p class="label">model message</p>
   <div class="alert alert-success">
+    It updates last two fields if they were never changed.
     <input type="text" ng-model="message" />
     <h1>{{message}}</h1>
 
     <div ng-controller="FirstDotCtrl">
+      It updates only this field.
       <input type="text" ng-model="message" />
       <h1>{{message}}</h1>
     </div>
 
     <div ng-controller="SecondDotCtrl">
+      It updates only this field.
       <input type="text" ng-model="message" />
       <h1>{{message}}</h1>
     </div>
   </div>
 
 
+  <p class="label">model data.message</p>
   <div class="alert">
+    If you set this field then all fields will change. And if after that you will change last two fields then they will change all fields.
     <input type="text" ng-model="data.message" />
     <h1>{{data.message}}</h1>
 
     <div ng-controller="FirstDotCtrl">
+      If you change this filed and first field was never changed then only this field will change.
       <input type="text" ng-model="data.message" />
       <h1>{{data.message}}</h1>
     </div>
 
     <div ng-controller="SecondDotCtrl">
+      If you change this filed and first field was never changed then only this field will change.
       <input type="text" ng-model="data.message" />
       <h1>{{data.message}}</h1>
     </div>
