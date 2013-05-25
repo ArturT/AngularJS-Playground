@@ -1,3 +1,4 @@
 # minimalist jasmine.yml configuration when leveraging asset pipeline
 spec_files:
+  - "spec_helper.{js,coffee}"
   - "**/*[Ss]pec.{js,coffee}"
