@@ -2,6 +2,8 @@ Egghead::Application.routes.draw do
 
   root :to => 'home#index'
 
+  mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
