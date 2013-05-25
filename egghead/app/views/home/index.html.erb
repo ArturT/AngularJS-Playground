@@ -1,9 +1,5 @@
 <h1>Home</h1>
 
-<% Dir.entries(Rails.root+"app/views/pages").each do |file| %>
-  <% if file.match(/^[0-9]/) %>
-    <p>
-    <%= link_to file.split('.html.erb').first, page_path(file.split('.html.erb').first) %>
-    </p>
-  <% end %>
+<% pages_names.each do |file| %>
+  <p><%= link_to file, page_path(file) %></p>
 <% end %>
