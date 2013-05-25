@@ -1,0 +1,45 @@
+<div ng-app="myApp9">
+
+  <div ng-controller="ctrls9.AvengersCtrl">
+
+    <form class="form-horizontal">
+      <div class="control-group">
+        <label class="control-label">Search by text in row:</label>
+        <div class="controls">
+          <input type="text" ng-model="search.$" />
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">Search by actor's name:</label>
+        <div class="controls">
+          <input type="text" ng-model="search.name" />
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">Search by character:</label>
+        <div class="controls">
+          <input type="text" ng-model="search.character" />
+        </div>
+      </div>
+    </form>
+
+    <table class="table table-striped">
+      <tr>
+        <th>Actor</th>
+        <th>Character</th>
+      </tr>
+      <!--
+        orderBy:'name'   ascending sorting
+        orderBy:'-name'  descending sorting
+        limitTo:3        fetch first 3 rows
+        limitTo:-3       fetch last 3 rows
+      -->
+      <tr ng-repeat="actor in avengers.cast | orderBy:'-name' | limitTo:3 | filter:search">
+        <td>{{actor.name | lowercase}}</td>
+        <td>{{actor.character | uppercase}}</td>
+      </tr>
+    </table>
+
+  </div>
+
+</div>
