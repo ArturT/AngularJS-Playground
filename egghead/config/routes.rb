@@ -2,6 +2,8 @@ Egghead::Application.routes.draw do
 
   root :to => 'home#index'
 
+  get '/templates/*id' => 'templates#show', :as => :template, :format => false
+
   mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
 
   # The priority is based upon order of creation:
