@@ -1,6 +1,6 @@
 <div ng-app="app33">
   <div class="well">
-    <p><%= link_to 'default', page_path('33_redirect-to') %></p>
+    <p><%= link_to 'default', page_path('33_redirect-to', anchor: '/') %></p>
     <p><%= link_to 'deep', page_path('33_redirect-to', anchor: 'deep') %></p>
     <p><%= link_to "doesn't exist", page_path('33_redirect-to', anchor: 'doesntexist') %></p>
     <p><%= link_to '/pizza/:crust/:toppings[?search=...]', page_path('33_redirect-to', anchor: '/pizza/deep/toppings?search=elo&second-search=elo2') %></p>

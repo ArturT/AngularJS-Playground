@@ -1,3 +1,9 @@
 <div ng-app="app31">
+  <div class="well">
+    <p><%= link_to 'default', page_path('31_dollar_route-provider_api', anchor: '/') %></p>
+    <p><%= link_to 'pizza', page_path('31_dollar_route-provider_api', anchor: 'pizza') %></p>
+    <p><%= link_to "doesn't exist", page_path('31_dollar_route-provider_api', anchor: 'doesntexist') %></p>
+  </div>
+
   <ng-view></ng-view>
 </div>
