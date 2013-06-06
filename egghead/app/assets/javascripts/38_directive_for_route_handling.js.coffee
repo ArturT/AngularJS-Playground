@@ -30,7 +30,7 @@ appCtrl = app.controller 'AppCtrl', ($rootScope) ->
     console.log rejection
 
 
-viewCtrl = app.controller 'ViewCtrl', ($scope, $route) ->
+viewCtrl = app.controller 'ViewCtrl', ($scope) ->
   $scope.model =
     message: "I'm a great app!"
 
