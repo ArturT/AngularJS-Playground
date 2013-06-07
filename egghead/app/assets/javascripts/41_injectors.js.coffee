@@ -7,8 +7,10 @@ app.factory 'game2', ->
   title: 'The Walking Dead'
 
 
+# invoke game from module app41
 angular.injector(['app41']).invoke (game) ->
-  console.log game
+  # it happens on each page which loads the script 41_injectors.js.coffee
+  #console.log game
 
 
 app.controller 'AppCtrl', ($scope, game, $injector) ->
