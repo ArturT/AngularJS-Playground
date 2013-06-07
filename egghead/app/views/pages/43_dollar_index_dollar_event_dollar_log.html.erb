@@ -1,0 +1,11 @@
+<div ng-app="app43">
+  <div ng-controller="AppCtrl">
+    <div
+      class="btn span3"
+      ng-repeat="item in 'elo'.split('')"
+      ng-click="ev = $event; $log.info($event); myFunc($event)">
+      {{$index + 1}}. {{item}}
+      <span class="badge">{{ev.pageX}}</span>
+    </div>
+  </div>
+</div>
