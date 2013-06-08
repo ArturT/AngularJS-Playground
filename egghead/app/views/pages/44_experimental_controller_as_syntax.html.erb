@@ -1,0 +1,10 @@
+<div ng-app="app44" ng-controller="RoomCtrl as room">
+  <!-- when you use controller as syntax you must use room prefix in order to have access openDoor -->
+  <button class="btn" ng-click="room.openDoor()">Open Door</button>
+  <button class="btn" ng-click="closeDoor()">Close Door</button>
+
+  <div ng-controller="OtherCtrl as other">
+    {{room.foo}}
+    {{other.bar}}
+  </div>
+</div>
