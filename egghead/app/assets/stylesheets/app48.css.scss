@@ -1,0 +1,30 @@
+.app48 {
+  .toggle {
+    background: #cfcfcf;
+    border-radius: 7px;
+    margin: 7px;
+    padding: 50px;
+    font-size: 50px;
+    transition: linear 3s;
+
+    &.ng-enter {
+      opacity: 0;
+      color: yellow;
+    }
+
+    &.ng-enter-active {
+      opacity: 1;
+      color: red;
+    }
+
+    &.ng-leave {
+      opacity: 1;
+      color: green;
+    }
+
+    &.ng-leave-active {
+      opacity: 0;
+      color: blue;
+    }
+  }
+}
