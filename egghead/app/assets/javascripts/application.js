@@ -16,5 +16,6 @@
 //= #require unstable/angular
 //= require vendor-angular/angular
 //= require vendor-angular/angular-animate
+//= require vendor-angular/angular-ui-router.min
 //= require TweenMax.min
 //= require_tree .
