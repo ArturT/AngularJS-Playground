@@ -16,7 +16,8 @@ module.exports = function(config) {
     files: [
       'spec/karma/lib/angular.js',
       'spec/karma/lib/angular-mocks.js',
-      'spec/karma/**/*_spec.coffee'
+      'spec/karma/**/*_spec.coffee',
+      'app/assets/javascripts/testable/*.js.coffee'
     ],
 
 
