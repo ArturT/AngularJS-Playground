@@ -1,0 +1,15 @@
+{
+  "name": "69_gruntjs_watch",
+  "version": "0.0.1",
+  "description": "Play with grunt watch",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Me",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}
